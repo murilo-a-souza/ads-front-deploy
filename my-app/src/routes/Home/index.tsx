@@ -74,7 +74,7 @@ export default function Home() {
           {usuarios.map( (u,indice)=>(
             <li key={indice}>{u.id} - {u.login} - 
               <a href={u.html_url} target="_blank">
-                <img src={u.avatar_url} alt={u.login} width="40"/>
+                <img src={u.avatar_url} alt={u.login} width="100"/>
               </a>
             </li>
           ))}
