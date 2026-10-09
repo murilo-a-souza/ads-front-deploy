@@ -3,13 +3,6 @@ import { useParams } from "react-router";
 import type { TipoProduto } from "../../types/types";
 import { useNavigate } from "react-router";
 
-const listaProdutos = [
-
-  {id: 1, nome: "Produto-1", preco: 23.90 },
-  {id: 2, nome: "Produto-2", preco: 99.10 },
-  {id: 3, nome: "Produto-3", preco: 132.40 },
-];
-
 export default function EditarProduto() {
   document.title = "Editar Produto";
 

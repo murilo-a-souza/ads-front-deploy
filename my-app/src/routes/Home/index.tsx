@@ -11,9 +11,7 @@ export default function Home() {
     console.log("Um milhão de linhas sendo carregadas:", chamadas);
     chamadas++;
   }, [clicado]);
-  .container{
-    @apply bg - gray - 400 max - w - full max - h - full flex flex - col justify - between
-  }
+
   type TipoUsuarioGit = {
     login: string;
     id: number;
@@ -57,7 +55,7 @@ export default function Home() {
     }
   }
 
-  //loadingData();
+  loadingData();
 
  },[]);
 
