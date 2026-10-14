@@ -4,8 +4,12 @@ import { Link, useNavigate } from "react-router";
 import { FaRegEdit as Editar } from "react-icons/fa";
 import { MdOutlineDeleteForever as Excluir } from "react-icons/md";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export default function Produtos() {
   document.title = "Produtos";
+
+
 
   const navigate = useNavigate()
 
@@ -16,14 +20,18 @@ export default function Produtos() {
     const carregaProdutos = async () => {
 
       try {
-        const resposta = await fetch("http://localhost:3001/produtos");
+        const resposta = await fetch(API_URL);
 
         if (!resposta.ok) {
           throw new Error("Erro na listagem dos produtos!");
         }
 
-        const data: TipoProduto[] = await resposta.json();
-        setProdutos(data);
+        //const data: TipoProduto[] = await resposta.json();
+        //setProdutos(data);
+
+        const resultado: any = await resposta.json();
+
+        setProdutos(resultado.data);
 
       } catch (error) {
         console.error(error);
